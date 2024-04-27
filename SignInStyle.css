@@ -30,7 +30,7 @@ body {
   }
   
   /* Login Page Icon */
-  .loginIcon{
-    height: 500;
-    width: 650;
-  }
+#text{
+    padding-left: 5px;
+    padding-right: 5px;
+}
