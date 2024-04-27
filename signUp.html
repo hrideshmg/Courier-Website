@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>signIn</title>
+    <title>signUp</title>
     <link rel="stylesheet"
         href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" 
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" 
@@ -32,8 +32,8 @@
             <a class="nav-item nav-link" href="#">About Us</a>
           </div>
           <div>
-            <!-- <button class="auth-btn pr-3">Login</button> -->
-            <a href="signUp.html"><button class="auth-btn pr-3">Sign Up</button></a>
+            <a href="signIn.html"><button class="auth-btn pr-3">Login</button></a>
+            <!-- <button class="auth-btn pl-3">Sign Up</button> -->
           </div>
         </div>
       </nav>
@@ -44,7 +44,7 @@
                 <img src="Assets/Images/login.png" class="mw-25% mh-" alt="loginPage icon">
             </div>
             <div class="col-md-6">
-                <h1 id="text" class="text-center">Login</h1>
+                <h1 id="text" class="text-center">Sign Up</h1>
                 <form action="">
                     <p id="text">email</p>
                     <div class="input-group mb-3">
@@ -54,20 +54,27 @@
                     <div class="input-group mb-8">
                         <input type="password" class="form-control" id="passwordInput" placeholder="Password" style="border: none;">
                         <div class="input-group-append ">
-                          <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIcon" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
+                          <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePassword1Visiblity()" id="eyeIconPasscode" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
+                        </div>
+                    </div> <br>
+                    <p id="text" class="mb-3">Confirm Password</p> 
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Password" style="border: none;">
+                        <div class="input-group-append ">
+                          <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIconConfirmPasscode" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
                         </div>
                     </div>
                 </form>
                 <div class="pt-5 d-flex justify-content-center">
-                    <button type="submit" onclick="" class="pl-5 pr-5 pt-1 pb-1" style="background-color: #f95c19;color: white; border-radius: 10px;">Log in</button>
+                    <button type="submit" onclick="validatePasswords()" class="pl-5 pr-5 pt-1 pb-1" style="background-color: #f95c19;color: white; border-radius: 10px;">Sign-Up</button>
                 </div>
             </div>            
         </div>
     </div>
     <script>
-        function togglePasswordVisiblity(){
+        function togglePassword1Visiblity(){
             var inputPasscode=document.getElementById("passwordInput");
-            var eyeIcon=document.getElementById("eyeIcon");
+            var eyeIcon=document.getElementById("eyeIconPasscode");
 
             if (inputPasscode.type=== "password"){
                 inputPasscode.type="text";
@@ -75,6 +82,29 @@
             } else{
                 inputPasscode.type="password";
                 eyeIcon.src="Assets/Icons/eye.png";
+            }
+        }
+        function togglePasswordVisiblity(){
+            var inputPasscode=document.getElementById("confirmPasswordInput");
+            var eyeIcon=document.getElementById("eyeIconConfirmPasscode");
+
+            if (inputPasscode.type=== "password"){
+                inputPasscode.type="text";
+                eyeIcon.src="Assets/Icons/eye-off.png";
+            } else{
+                inputPasscode.type="password";
+                eyeIcon.src="Assets/Icons/eye.png";
+            }
+        }
+        function validatePasswords(){
+            var passwordInput = document.getElementById("passwordInput").value;
+            var confirmPasswordInput = document.getElementById("confirmPasswordInput").value;
+
+            if (passwordInput !== confirmPasswordInput){
+                alert("Passwords do not match. Please try again.");
+                return false;
+            } else {
+                console.log("sign-up successfull");
             }
         }
     </script>
