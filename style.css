@@ -1,0 +1,25 @@
+.auth-btn {
+  background-color: #ffe4d9;
+  border: none;
+  border-radius: 5px;
+  color: #f95c19;
+  font-family: "Oxanium";
+  font-size: 1.2em;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.active {
+  color: #f95c19 !important;
+}
+a {
+  font-family: "Raleway";
+}
+
+.brand-name {
+  display: inline;
+  font-family: "Oxanium";
+  color: #f95c19;
+  font-weight: 700;
+  font-size: 1.2em;
+}
