@@ -1,41 +1,6 @@
-/* -------------------------------------------------------------------------- */
-/*                                 Theme                                      */
-/* -------------------------------------------------------------------------- */
-/* prettier-ignore */
-/* -------------------------------------------------------------------------- */
-/*                                  Utilities                                 */
-/* -------------------------------------------------------------------------- */
-/*-----------------------------------------------
-|   Bootstrap Styles
------------------------------------------------*/
-/*!
- * Bootstrap v5.0.0-alpha1 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
-  --bs-blue: #0088B4;
-  --bs-indigo: #6237FF;
-  --bs-purple: #A1B0FC;
-  --bs-pink: #D42DA3;
-  --bs-red: #F95C19;
-  --bs-orange: #F17228;
-  --bs-yellow: #FFAF0F;
-  --bs-green: #00BA77;
-  --bs-teal: #53F283;
-  --bs-cyan: #00CEC2;
-  --bs-white: #FFFEFE;
-  --bs-gray: #7B7A8B;
-  --bs-gray-dark: #464558;
-  --bs-primary: #F95C19;
-  --bs-secondary: #0088B4;
-  --bs-success: #00BA77;
-  --bs-info: #00CEC2;
-  --bs-warning: #FFAF0F;
-  --bs-danger: #F95C19;
-  --bs-light: #F0F4F9;
-  --bs-dark: #222132;
+  
   --bs-font-sans-serif: "Raleway", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --bs-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 254, 254, 0.15), rgba(255, 254, 254, 0));
@@ -60,8 +25,8 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #2F2E41;
-  background-color: #FFFEFE;
+  color: #0F4C75;
+  background-color: #0F4C75;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -198,7 +163,7 @@ small, .small {
 
 mark, .mark {
   padding: 0.2em;
-  background-color: #fcf8e3;
+  background-color: #0F4C75;
 }
 
 sub,
@@ -602,7 +567,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #FFFEFE;
+  background-color: #0F4C75;
   border: 1px solid #C5C5D2;
   border-radius: 0.5rem;
   max-width: 100%;
@@ -2545,7 +2510,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #2F2E41;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   background-clip: padding-box;
   border: 1px solid #AFAEBC;
   -webkit-appearance: none;
@@ -2577,7 +2542,7 @@ progress {
 
 .form-control:focus {
   color: #2F2E41;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   border-color: #fcae8c;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(249, 92, 25, 0.25);
@@ -2614,7 +2579,7 @@ progress {
 }
 
 .form-control:disabled, .form-control[readonly] {
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   opacity: 1;
 }
 
@@ -2624,7 +2589,7 @@ progress {
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
   color: #2F2E41;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -2647,7 +2612,7 @@ progress {
 }
 
 .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
-  background-color: #d0d0dd;
+  background-color: #0F4C75;
 }
 
 .form-control::-webkit-file-upload-button {
@@ -2656,7 +2621,7 @@ progress {
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
   color: #2F2E41;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   pointer-events: none;
   border-color: inherit;
   border-style: solid;
@@ -2779,7 +2744,7 @@ textarea.form-control-lg {
   font-weight: 400;
   line-height: 1.5;
   color: #2F2E41;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23464558' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2804,7 +2769,7 @@ textarea.form-control-lg {
 }
 
 .form-select:disabled {
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
 }
 
 .form-select:-moz-focusring {
@@ -2843,7 +2808,7 @@ textarea.form-control-lg {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -3221,7 +3186,7 @@ textarea.form-control-lg {
   color: #2F2E41;
   text-align: center;
   white-space: nowrap;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   border: 1px solid #AFAEBC;
   border-radius: 0.5rem;
 }
@@ -4444,7 +4409,7 @@ fieldset:disabled .btn {
 .dropdown-item:hover, .dropdown-item:focus {
   color: #2a293b;
   text-decoration: none;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -4758,6 +4723,7 @@ fieldset:disabled .btn {
 }
 
 .navbar {
+ 
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5203,6 +5169,7 @@ fieldset:disabled .btn {
   color: #FFFEFE;
 }
 
+
 .card {
   position: relative;
   display: -webkit-box;
@@ -5450,14 +5417,14 @@ fieldset:disabled .btn {
   z-index: 2;
   color: #F95C19;
   text-decoration: none;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   border-color: #C5C5D2;
 }
 
 .page-link:focus {
   z-index: 3;
   color: #F95C19;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   outline: 0;
   -webkit-box-shadow: 0 0 0 0.25rem rgba(249, 92, 25, 0.25);
   box-shadow: 0 0 0 0.25rem rgba(249, 92, 25, 0.25);
@@ -5674,7 +5641,7 @@ fieldset:disabled .btn {
   height: 1rem;
   overflow: hidden;
   font-size: 0.75rem;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
   border-radius: 0.5rem;
 }
 
@@ -5763,7 +5730,7 @@ fieldset:disabled .btn {
 
 .list-group-item-action:active {
   color: #2F2E41;
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
 }
 
 .list-group-item {
@@ -17948,7 +17915,7 @@ ul {
 }
 
 .icon-item:hover, .icon-item:focus {
-  background-color: #DBDBE9;
+  background-color: #0F4C75;
 }
 
 .icon-item.icon-item-sm {
