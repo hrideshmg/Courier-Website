@@ -41,7 +41,7 @@
     <div class="container p-4">
         <div class="row">
             <div class="col-md-6">
-                <img src="Assets/Images/login.png" class="mw-25% mh-" alt="loginPage icon">
+                <img src="assets/Images/login.png" class="mw-25% mh-" alt="loginPage icon">
             </div>
             <div class="col-md-6">
                 <h1 id="headertext" class="text-center">Sign Up</h1>
@@ -54,14 +54,14 @@
                     <div class="input-group mb-8">
                         <input type="password" class="form-control" id="passwordInput" placeholder="Password" style="border: none;">
                         <div class="input-group-append ">
-                          <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePassword1Visiblity()" id="eyeIconPasscode" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
+                          <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePassword1Visiblity()" id="eyeIconPasscode" src="assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
                         </div>
                     </div> <br>
                     <p id="text" class="mb-3">Confirm Password</p> 
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Password" style="border: none;">
                         <div class="input-group-append ">
-                          <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIconConfirmPasscode" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
+                          <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIconConfirmPasscode" src="assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
                         </div>
                     </div>
                 </form>
@@ -78,10 +78,10 @@
 
             if (inputPasscode.type=== "password"){
                 inputPasscode.type="text";
-                eyeIcon.src="Assets/Icons/eye-off.png";
+                eyeIcon.src="assets/Icons/eye-off.png";
             } else{
                 inputPasscode.type="password";
-                eyeIcon.src="Assets/Icons/eye.png";
+                eyeIcon.src="assets/Icons/eye.png";
             }
         }
         function togglePasswordVisiblity(){
@@ -90,10 +90,10 @@
 
             if (inputPasscode.type=== "password"){
                 inputPasscode.type="text";
-                eyeIcon.src="Assets/Icons/eye-off.png";
+                eyeIcon.src="assets/Icons/eye-off.png";
             } else{
                 inputPasscode.type="password";
-                eyeIcon.src="Assets/Icons/eye.png";
+                eyeIcon.src="assets/Icons/eye.png";
             }
         }
         function validatePasswords(){

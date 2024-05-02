@@ -11,18 +11,6 @@
   );
 }
 
-.auth-btn {
-  background-color: #0F4C75;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-family: "Oxanium";
-  font-weight: bold;
-  font-size: 1.2em;
-  padding: 5px;
-  font-weight: 500;
-}
-
 *,
 *::before,
 *::after {
@@ -18630,7 +18618,9 @@ ul {
   box-shadow: none;
 }
 
-
+/*-----------------------------------------------
+|   Vertical Line (used in kanban header)
+-----------------------------------------------*/
 .vertical-line:after {
   position: absolute;
   content: "";
@@ -18673,6 +18663,10 @@ ul {
 .min-w-0 {
   min-width: 0;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                Terms sidebar                               */
+/* -------------------------------------------------------------------------- */
 .terms-sidebar .nav-link {
   color: #9291a1;
   font-weight: 500;
@@ -18791,6 +18785,9 @@ ul {
   opacity: 0;
 }
 
+/*-----------------------------------------------
+|   LaslesVPN glow buttons
+-----------------------------------------------*/
 .btn-glow {
   position: relative;
 }
@@ -18885,6 +18882,9 @@ ul {
   transform: translateX(4px);
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                    Badge                                   */
+/* -------------------------------------------------------------------------- */
 .badge {
   font-weight: 500;
   border-radius: 0;
@@ -19062,3 +19062,63 @@ ul {
   border-radius: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+  background-color: #f0f4f9;
+}
+.navbar-nav {
+  flex-direction: column;
+  gap: 10px;
+}
+@media(min-width: 768px){ 
+.navbar-nav {
+  flex-direction: row;
+  gap: 10px;
+}
+}
+.nav-item {
+  text-align: left;
+}
+.auth-btn {
+  background-color: #0F4C75;
+  border: none;
+  border-radius: 5px;
+  color: #EBEBF5;
+  font-family: "Oxanium";
+  font-size: 1.2em;
+  font-weight: bold;
+  width:6.4rem;
+  padding: 8px;
+}
+
+.auth-btn:hover {
+  color: #BBE1FA;
+  background-color: #092e47;
+}
+.auth-btn:focus{
+  border: 3px solid #BBE1FA87;
+  background-color: #0F4C75;
+  color: #EBEBF5;
+}
+
+.active {
+  color: #BBE1FA !important;
+}
+
+.auth-container {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+}
+
+.btn {
+  font-family: "Oxanium";
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oxanium";
+}
+
+li::marker {
+  color:#1B262C;
+  font-size: 1.5rem;
+}
