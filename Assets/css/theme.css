@@ -11,6 +11,18 @@
   );
 }
 
+.auth-btn {
+  background-color: #0F4C75;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: "Oxanium";
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 5px;
+  font-weight: 500;
+}
+
 *,
 *::before,
 *::after {
