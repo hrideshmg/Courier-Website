@@ -64,14 +64,14 @@
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" id="passwordInput" placeholder="Password" style="color: white; border: none;">
                         <div class="input-group-append ">
-                          <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePassword1Visiblity()" id="eyeIconPasscode" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
+                            <span class="input-group-text" style="background-color: #0F4C75; border: none;border-radius: 0px 5px 5px 0px ;height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIcon" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
                         </div>
                     </div> 
                     <p id="text" style="color: white;">Confirm Password</p> 
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Password" style="color: white; border: none;">
                         <div class="input-group-append ">
-                          <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIconConfirmPasscode" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
+                            <span class="input-group-text" style="background-color: #0F4C75; border: none;border-radius: 0px 5px 5px 0px ;height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIcon" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
                         </div>
                     </div>
                 </form>
@@ -89,7 +89,7 @@
 
             if (inputPasscode.type=== "password"){
                 inputPasscode.type="text";
-                eyeIcon.src="Assets/Icons/eye-off.png";
+                eyeIcon.src="Assets/Icons/eye-disabled.svg";
             } else{
                 inputPasscode.type="password";
                 eyeIcon.src="Assets/Icons/eye.png";
@@ -101,7 +101,7 @@
 
             if (inputPasscode.type=== "password"){
                 inputPasscode.type="text";
-                eyeIcon.src="Assets/Icons/eye-off.png";
+                eyeIcon.src="Assets/Icons/eye-disabled.svg";
             } else{
                 inputPasscode.type="password";
                 eyeIcon.src="Assets/Icons/eye.png";
