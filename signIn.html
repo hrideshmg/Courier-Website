@@ -9,57 +9,53 @@
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" 
         crossorigin="anonymous"
     >
-    <link rel="stylesheet" href="SignInStyle.css" />
+    <link rel="stylesheet" href="Assets/css/theme.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 </head>
 <body>
-    <nav class="navbar navbar-expand">
+    <nav class="navbar" style="background-color: #172025;filter: drop-shadow(3px 3px 15px #090d17);">
         <div class="container">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand" href="HomePage.html"
             ><img
               src="logo.png"
               alt=""
-              width="30"
-              height="24"
               class="d-inline-block align-text-top"
             />
-            <div class="brand-name">CourFast</div></a
-          >
           <div class="navbar-nav text-center">
-            <a class="nav-item nav-link active" href="#">Home</a>
+            <a class="nav-item nav-link active" href="HomePage.html">Home</a>
             <a class="nav-item nav-link" href="#">My Orders</a>
             <a class="nav-item nav-link" href="#">About Us</a>
           </div>
-          <div>
-            <!-- <button class="auth-btn pr-3">Login</button> -->
-            <a href="signUp.html"><button class="auth-btn pr-3">Sign Up</button></a>
+          <div class="auth-container">
+            <a href="signIn.html"><button class="auth-btn" >LOGIN</button></a>
+            <a href="signUp.html"><button class="auth-btn">SIGN UP</button></a>
           </div>
         </div>
       </nav>
     <!-- Login Page Content -->
-    <div class="container p-4">
+    <div class="container p-4" style="background-color: #1B262C;">
         <div class="row">
             <div class="col-md-6">
                 <img src="Assets/Images/login.png" class="mw-25% mh-" alt="loginPage icon">
             </div>
             <div class="col-md-6">
-                <h1 id="headertext" class="text-center">Login</h1>
+                <h1 id="headertext" style="color: white;" class="text-center">Login</h1>
                 <form action="">
-                    <p id="text">email</p>
+                    <p id="text" style="color: white;">email</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username" style="border: none;">
+                        <input type="text" class="form-control" placeholder="Username" style="border: none; color: white;">
                     </div>
-                    <p id="text">Password</p>
+                    <p id="text" style="color: white;">Password</p>
                     <div class="input-group mb-8">
-                        <input type="password" class="form-control" id="passwordInput" placeholder="Password" style="border: none;">
+                        <input type="password" class="form-control" id="passwordInput" placeholder="Password" style="color: white; border: none;">
                         <div class="input-group-append ">
                           <span class="input-group-text" style="background-color: white; border: none; height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIcon" src="Assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
                         </div>
                     </div>
                 </form>
-                <div class="pt-5 d-flex justify-content-center">
-                    <button type="submit" onclick="" class="pl-5 pr-5 pt-1 pb-1" style="background-color: #f95c19;color: white; border-radius: 10px;">Log in</button>
+                <div class=" d-flex justify-content-center">
+                    <button type="submit" onclick="" class="auth-btn" style="border-radius: 10px;">Log in</button>
                 </div>
             </div>            
         </div>
