@@ -150,6 +150,7 @@ h6,
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+  font-family: "Raleway";
 }
 
 abbr[title],
@@ -19106,4 +19107,18 @@ ul {
   display: flex;
   flex-direction: row;
   gap: 11px;
+}
+
+.btn {
+  font-family: "Oxanium";
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oxanium";
+}
+
+li::marker {
+  color:#1B262C;
+  font-size: 1.5rem;
 }
