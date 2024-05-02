@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" 
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" 
+        crossorigin="anonymous"
+    >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Assets/css/theme.css" />
+    <style>
+        body,html{
+            height: 100%;
+        }
+        .navbar{
+            position: relative;
+            z-index: 1000;
+        }
+        .bg-holder{
+            position: relative;
+            z-index: 0;
+        }
+        .productImage{
+            height: 350px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" style="background-color: #172025;filter: drop-shadow(3px 3px 15px #090d17);">
+        <div class="container">
+          <a class="navbar-brand" href="HomePage.html"
+            ><img
+              src="logo.png"
+              alt=""
+              class="d-inline-block align-text-top"
+            />
+          <div class="navbar-nav text-center">
+            <a class="nav-item nav-link active" href="HomePage.html">Home</a>
+            <a class="nav-item nav-link" href="order.html">My Orders</a>
+            <a class="nav-item nav-link" href="#">About Us</a>
+          </div>
+          <div class="auth-container">
+            <a href="signIn.html"><button class="auth-btn" >LOGIN</button></a>
+            <a href="signUp.html"><button class="auth-btn">SIGN UP</button></a>
+          </div>
+        </div>
+    </nav>
+    <div class="bg-holder bg-size" style="background-color: #1B262C;">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="row pt-2 pb-4">
+                        <button class="auth-btn mx-2" style="border-radius: 20px;">Dispatched</button>
+                        <button class="auth-btn mx-2" style="border-radius: 20px;">En-Route</button>
+                        <button class="auth-btn mx-2" style="border-radius: 20px;">Delivered</button>
+                    </div>
+                    <div class="container p-4 fs-1 fs-xxl-1">
+                        <!-- <div class="row" style="background-color: white;">
+                            <div class="col">
+                                <div class="d-flex align-items-center">
+                                    <img src="Assets/Icons/headPhone.png" class="productImage" alt="productImage" style="width: 20px; height: 50px;">
+                                    <div class="ms-3">
+                                        <p>HyperX Cloud Stinger Core</p>
+                                        <p>Ship To: Kaniyampuzha Rd, Vytilla, Kochi, Kerala, P.O 682019</p>
+                                        <p>Order No: #406-3699206-1254715</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+s                    
+                    </div>
+                <div class="col-md-3 pt-3 pb-3" style="background-color: #0F4C75; border-radius: 10px;">
+                    <p style="color: white;" class="fs-25"><b>Track</b> Your Order</p>
+                    <form action="">
+                        <input type="email" class="form-control" placeholder="Enter Your Order ID" style="background-color: white;">
+                        <div class="pt-3 d-flex justify-content-center">
+                            <button type="submit" style="width: 100%; height: 20%; color: white; background-color: black;border-radius: 15px;"class="p-3">Track Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
