@@ -9,24 +9,22 @@
   <body >
     <main class="main" id="top">
       <nav class="navbar" style="background-color: #172025;filter: drop-shadow(3px 3px 15px #090d17);">
-      <div class="container">
-        <a class="navbar-brand" href="#"
-          ><img
-            src="assets/Images/logo.png"
-            alt=""
-            class="d-inline-block align-text-top"
-          />
-        <div class="navbar-nav text-center">
-          <a class="nav-item nav-link active" href="#">Home</a>
-          <a class="nav-item nav-link" href="#">My Orders</a>
-          <a class="nav-item nav-link" href="#">About Us</a>
+        <div class="container d-flex flex-row align-items-center justify-content-between">
+          <a class="navbar-brand" href="#">
+            <img src="assets/Images/logo.png" alt="" class="d-inline-block align-text-top" />
+          </a>
+          <div class="navbar-nav text-center d-flex flex-row">
+            <a class="nav-item nav-link active me-3" href="#">Home</a>
+            <a class="nav-item nav-link me-3" href="#">My Orders</a>
+            <a class="nav-item nav-link me-3" href="#">About Us</a>
+          </div>
+          <div class="auth-container">
+            <a href="signIn.html"><button class="auth-btn">LOGIN</button></a>
+            <a href="signUp.html"><button class="auth-btn">SIGN UP</button></a>
+          </div>
         </div>
-        <div class="auth-container">
-          <a href="signIn.html"><button class="auth-btn" >LOGIN</button></a>
-          <a href="signUp.html"><button class="auth-btn">SIGN UP</button></a>
-        </div>
-      </div>
-    </nav>
+      </nav>
+      
       <section class="pb-0 pt-25" id="home">
         <div class="bg-holder bg-size" style="background-color: #1B262C;">
         </div>
