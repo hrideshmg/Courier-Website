@@ -19127,3 +19127,7 @@ li::marker {
 input, textarea{
   caret-color: white;
 }
+
+.cl2{
+  color: #BBE1FA;
+}
