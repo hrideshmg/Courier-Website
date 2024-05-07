@@ -19124,10 +19124,14 @@ li::marker {
   font-size: 1.5rem;
 }
 
-input, textarea{
+.form-control, .form-control:focus{
   caret-color: white;
+  color: white;
 }
+
+
 
 .cl2{
   color: #BBE1FA;
 }
+
