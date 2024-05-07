@@ -1,0 +1,14 @@
+.shipment-heading {
+  font-weight: 600;
+  font-family: Raleway;
+}
+
+.shipment-content {
+  font-weight: 400;
+  font-family: Raleway;
+  font-size: 1rem;
+}
+
+.filter {
+  background-color: #172025;
+}

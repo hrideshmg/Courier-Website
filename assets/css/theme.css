@@ -19087,6 +19087,7 @@ ul {
   font-weight: bold;
   width:7.0rem;
   padding: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .auth-btn:hover {
@@ -19121,4 +19122,8 @@ h1, h2, h3, h4, h5, h6 {
 li::marker {
   color:#1B262C;
   font-size: 1.5rem;
+}
+
+input, textarea{
+  caret-color: white;
 }

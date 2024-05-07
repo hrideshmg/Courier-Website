@@ -1,93 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>order</title>
-    <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" 
-        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" 
-        crossorigin="anonymous"
-    >
+    <link rel="stylesheet" href="assets/css/order.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/theme.css" />
     <style>
-        body,html{
-            height: 100%;
-        }
-        .navbar{
-            position: relative;
-            z-index: 1000;
-        }
-        .bg-holder{
-            position: relative;
-            z-index: 0;
-        }
-        .productImage{
-            height: 350px;
-            width: 100px;
-        }
+      body,
+      html {
+        height: 100%;
+      }
+      .navbar {
+        position: relative;
+        z-index: 1000;
+      }
+      .bg-holder {
+        position: relative;
+        z-index: 0;
+      }
+      .productImage {
+        height: 350px;
+        width: 100px;
+      }
     </style>
-</head>
-<body>
-    <nav class="navbar" style="background-color: #172025;filter: drop-shadow(3px 3px 15px #090d17);">
-        <div class="container">
-          <a class="navbar-brand" href="HomePage.html"
-            ><img
-              src="logo.png"
-              alt=""
-              class="d-inline-block align-text-top"
-            />
-          <div class="navbar-nav text-center">
-            <a class="nav-item nav-link active" href="HomePage.html">Home</a>
-            <a class="nav-item nav-link" href="order.html">My Orders</a>
-            <a class="nav-item nav-link" href="#">About Us</a>
-          </div>
-          <div class="auth-container">
-            <a href="signIn.html"><button class="auth-btn" >LOGIN</button></a>
-            <a href="signUp.html"><button class="auth-btn">SIGN UP</button></a>
-          </div>
+  </head>
+  <body>
+    <nav class="navbar" style="background-color: #172025; filter: drop-shadow(3px 3px 15px #090d17)">
+      <div class="container d-flex flex-row align-items-center justify-content-between">
+        <a class="navbar-brand" href="#">
+          <img src="assets/Images/Logo.png" alt="" class="d-inline-block align-text-top" />
+        </a>
+        <div class="navbar-nav text-center d-flex flex-row">
+          <a class="nav-item nav-link me-3" href="HomePage.html">Home</a>
+          <a class="nav-item nav-link active me-3" href="order.html">My Orders</a>
+          <a class="nav-item nav-link me-3" href="about.html">About Us</a>
         </div>
+        <div class="auth-container">
+          <a href="signIn.html"><button class="auth-btn">LOGIN</button></a>
+          <a href="signUp.html"><button class="auth-btn">SIGN UP</button></a>
+        </div>
+      </div>
     </nav>
-    <div class="bg-holder bg-size" style="background-color: #1B262C;">
-        <div class="container p-4">
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="row pt-2 pb-4">
-                        <button class="auth-btn mx-2" style="border-radius: 20px;">Dispatched</button>
-                        <button class="auth-btn mx-2" style="border-radius: 20px;">En-Route</button>
-                        <button class="auth-btn mx-2" style="border-radius: 20px;">Delivered</button>
-                    </div>
-                    <div class="container p-4 fs-1 fs-xxl-1">
-                        <!-- <div class="row" style="background-color: white;">
-                            <div class="col">
-                                <div class="d-flex align-items-center">
-                                    <img src="assets/Icons/headPhone.png" class="productImage" alt="productImage" style="width: 20px; height: 50px;">
-                                    <div class="ms-3">
-                                        <p>HyperX Cloud Stinger Core</p>
-                                        <p>Ship To: Kaniyampuzha Rd, Vytilla, Kochi, Kerala, P.O 682019</p>
-                                        <p>Order No: #406-3699206-1254715</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
-s                    
-                    </div>
-                <div class="col-md-3 pt-3 pb-3" style="background-color: #0F4C75; border-radius: 10px;">
-                    <p style="color: white;" class="fs-25"><b>Track</b> Your Order</p>
-                    <form action="">
-                        <input type="email" class="form-control" placeholder="Enter Your Order ID" style="background-color: white;">
-                        <div class="pt-3 d-flex justify-content-center">
-                            <button type="submit" style="width: 100%; height: 20%; color: white; background-color: black;border-radius: 15px;"class="p-3">Track Order</button>
-                        </div>
-                    </form>
-                </div>
+
+    <div class="bg-holder bg-size" style="background-color: #1b262c">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="row pt-2 pb-4">
+              <button id="dispatched" class="auth-btn mx-2" style="border-radius: 20px">Dispatched</button>
+              <button id="en_route" class="auth-btn mx-2" style="border-radius: 20px">En-Route</button>
+              <button id="delivered" class="auth-btn mx-2" style="border-radius: 20px">Delivered</button>
             </div>
+            <div class="container p-4 fs-1 fs-xxl-1">
+              <div class="row rounded p-3" style="background-color: #ebebf5">
+                <div class="col">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="assets/Icons/headPhone.png"
+                      class="productImage"
+                      alt="productImage"
+                      style="width: 6rem; height: 6rem"
+                    />
+                    <div class="ms-3">
+                      <h5 class="shipment-heading">HyperX Cloud Stinger Core</h5>
+                      <p class="shipment-content m-0">Ship To: Kaniyampuzha Rd, Vytilla, Kochi, Kerala, P.O 682019</p>
+                      <p class="shipment-content">Order No: #406-3699206-1254715</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 pt-3 pb-3" style="background-color: #0f4c75; border-radius: 10px">
+            <div class="p-3">
+              <h3 class="pb-2" style="color: white; font-weight: 300"><b>Track</b> Your Order</h3>
+              <form action="">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Your Order ID"
+                  style="background-color: white"
+                />
+                <div class="pt-3 d-flex justify-content-center">
+                  <button
+                    type="submit"
+                    style="
+                      width: 100%;
+                      height: 20%;
+                      color: white;
+                      background-color: #1b262c;
+                      border-radius: 15px;
+                      font-family: Oxanium;
+                      border: none;
+                    "
+                    class="p-3 mt-3"
+                  >
+                    Track Order
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
+    <script src="assets/js/order.js"></script>
+  </body>
 </html>
+
