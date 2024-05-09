@@ -63,26 +63,26 @@
                 <form action="">
                     <p id="text" style="color: white;">Email</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Email" style="color: white; border: none;">
+                        <input required type="email" class="form-control" placeholder="Email" style="color: white; border: none;">
                     </div>
                     <p id="text" style="color: white;">Password</p>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" id="passwordInput" placeholder="Password" style="color: white; border: none;">
+                        <input required type="password" class="form-control" id="passwordInput" placeholder="Password" style="color: white; border: none;">
                         <div class="input-group-append ">
                             <span class="input-group-text" style="background-color: #0F4C75; border: none;border-radius: 0px 5px 5px 0px ;height: 38px;"><img onclick="togglePassword1Visiblity()" id="eyeIconPasscode" src="assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
                         </div>
                     </div> 
                     <p id="text" style="color: white;">Confirm Password</p> 
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" id="confirmPasswordInput" placeholder="Password" style="color: white; border: none;">
+                        <input requied type="password" class="form-control" id="confirmPasswordInput" placeholder="Password" style="color: white; border: none;">
                         <div class="input-group-append ">
                             <span class="input-group-text" style="background-color: #0F4C75; border: none;border-radius: 0px 5px 5px 0px ;height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIconConfirmPasscode" src="assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
                         </div>
                     </div>
-                </form>
                 <div class="pt-5 d-flex justify-content-center">
                     <button type="submit" onclick="validatePasswords()" class="auth-btn pl-5 pr-5 pt-1 pb-1" style="width: 35%; border-radius: 10px;">Sign-Up</button>
                 </div>
+                </form>
             </div>            
         </div>
     </div>
