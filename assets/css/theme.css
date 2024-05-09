@@ -19128,10 +19128,10 @@ li::marker {
   caret-color: white;
   color: white;
 }
-
-
-
 .cl2{
   color: #BBE1FA;
 }
 
+.timeline li::marker {
+  color: #BBE1FA;
+}
