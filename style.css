@@ -41,53 +41,9 @@ body {
     background-size: cover;
     overflow: scroll;
 }
-
-/**
-* Template Name: Arsha
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-body {
-    font-family: "Open Sans", sans-serif;
-}
-
-a {
-    color: #47b2e4;
-    text-decoration: none;
-}
-
 a:hover {
     color: #73c5eb;
     text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Jost", sans-serif;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    overflow: hidden;
-    background: ;
 }
 
 #preloader:before {

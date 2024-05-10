@@ -1,16 +1,3 @@
-*/ :root {
-  --bs-font-sans-serif: "Raleway", "Open Sans", -apple-system,
-    BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --bs-font-monospace: "SFMono-Regular", Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(
-    180deg,
-    rgba(255, 254, 254, 0.15),
-    rgba(255, 254, 254, 0)
-  );
-}
-
 *,
 *::before,
 *::after {
@@ -19128,6 +19115,7 @@ li::marker {
   caret-color: white;
   color: white;
 }
+
 .cl2{
   color: #BBE1FA;
 }
@@ -19135,4 +19123,5 @@ li::marker {
 .timeline li::marker {
   color: #BBE1FA;
 }
+
 
