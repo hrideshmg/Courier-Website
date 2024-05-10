@@ -382,18 +382,21 @@
               <p class="text-muted"  style="color: white;">Monday to Friday, 9am-5pm.</p>
             </div>
             <div class="col-md-6 col-lg-5 col-xl-4">
-              <form class="row">
+              <form class="row" id="contactForm">
                 <div class="mb-3">
                   <label class="form-label visually-hidden" for="inputName">Name</label>
-                  <input class="form-control form-quriar-control" id="inputName" type="text" placeholder="Name" />
+                  <input class="form-control form-quriar-control" id="inputName" type="text" placeholder="Name" required>
+                  <div id="nameError" class="invalid-feedback">Please enter your name.</div>
                 </div>
                 <div class="mb-3">
-                  <label class="form-label visually-hidden" for="inputEmail">Another label</label>
-                  <input class="form-control form-quriar-control" id="inputEmail" type="email" placeholder="Email" />
+                  <label class="form-label visually-hidden" for="inputEmail">Email</label>
+                  <input class="form-control form-quriar-control" id="inputEmail" type="email" placeholder="Email" required>
+                  <div id="emailError" class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
                 <div class="mb-5">
                   <label class="form-label visually-hidden" for="validationTextarea">Message</label>
-                  <textarea class="form-control form-quriar-control is-invalid border-400" id="validationTextarea" placeholder="Message" style="height: 150px" required="required"></textarea>
+                  <textarea class="form-control form-quriar-control is-invalid border-400" id="validationTextarea" placeholder="Message" style="height: 150px" required></textarea>
+                  <div id="messageError" class="invalid-feedback">Please enter a message.</div>
                 </div>
                 <div class="d-grid">
                   <button class="btn btn-primary" style="background-color: #3282B8;border-color: #3282B8;" type="submit">Send Message<i class="fas fa-paper-plane ms-2"></i></button>
@@ -405,38 +408,23 @@
       </section>
       <section id="findUs" style="background-color: #1B262C;">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-5 mb-6 text-center">
-              <h5  style="color: white;">FIND US</h5>
-              <h2 style="color: white;">Access us easily</h2>
-            </div>
-            <div class="col-12">
-              <div class="card card-span rounded-2 mb-3">
-                <div class="row">
-                  <div class="col-md-6 col-lg-7 d-flex"><img class="w-100 fit-cover rounded-md-start rounded-top rounded-md-top-0" src="assets/Images/Map.png" alt="map" /></div>
-                  <div class="col-md-6 col-lg-5 d-flex flex-center">
-                    <div class="card-body">
-                      <h5 style="color: white;">Contact with us</h5>
-                      <p class="text-700 my-4"> <i class="fas fa-map-marker-alt text-warning me-3"></i><span>Kottatharayil, Kottackupuram, Clappana. P. O, Vallikavu, Kerala 690525
-                      </span></p>
-                      <p><i class="fas fa-phone-alt text-warning me-3"></i><span class="text-700">Monday - Friday: 10 am - 10pm<br/><span class="ps-4">Sunday: 11 am - 9pm  </span></span></p>
-                      <p><i class="fas fa-envelope text-warning me-3"> </i><a class="text-700" href=""> </a></p>
-                      <ul class="list-unstyled list-inline mt-5">
-                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-facebook-square fs-2"></i></a></li>
-                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-instagram-square fs-2"></i></a></li>
-                        <li class="list-inline-item"><a class="text-decoration-none" href="#!"><i class="fab fa-twitter-square fs-2"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-5 mb-6 text-center">
+                    <h5 style="color: white;">FIND US</h5>
+                    <h2 style="color: white;">Access us easily</h2>
                 </div>
-              </div>
-              <div class="text-center">
-                <button class="btn btn-primary px-5" style="background-color: #3282B8;border-color: #3282B8;" type="submit"><i class="fas fa-phone-alt me-2"></i><a class="text-light" href="tel:123-456789">Call us to delivery 123-456789</a></button>
+                <div class="col-12">
+                    <div class="card card-span rounded-2 mb-3">
+                        <div class="row">
+                                <iframe class="w-100 fit-cover rounded-md-start rounded-top rounded-md-top-0" src="map.html" frameborder="0" style="height: 430px;"></iframe>
+                          </div>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-primary px-5" style="background-color: #3282B8;border-color: #3282B8;" type="submit"><i class="fas fa-phone-alt me-2"></i><a class="text-light" href="tel:123-456789">Call us to delivery 123-456789</a></button>
               </div>
             </div>
-          </div>
         </div>
-      </section>
+    </section>
       <section style="background-color: #172025;">
         <div class="container" >
           <div class="row">
@@ -506,12 +494,44 @@
       </section>
     </main>
 
-    <script src="vendors/@popperjs/popper.min.js"></script>
-    <script src="vendors/bootstrap/bootstrap.min.js"></script>
-    <script src="vendors/is/is.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-    <script src="vendors/fontawesome/all.min.js"></script>
-    <script src="assets/js/theme.js"></script>
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        var nameInput = document.getElementById('inputName');
+        var emailInput = document.getElementById('inputEmail');
+        var messageInput = document.getElementById('validationTextarea');
+        var nameError = document.getElementById('nameError');
+        var emailError = document.getElementById('emailError');
+        var messageError = document.getElementById('messageError');
+    
+        if (nameInput.value === '') {
+          nameError.style.display = 'block';
+          event.preventDefault();
+        } else {
+          nameError.style.display = 'none';
+        }
+    
+        if (emailInput.value === '' || !isValidEmail(emailInput.value)) {
+          emailError.style.display = 'block';
+          event.preventDefault();
+        } else {
+          emailError.style.display = 'none';
+        }
+    
+        if (messageInput.value === '') {
+          messageError.style.display = 'block';
+          event.preventDefault();
+        } else {
+          messageError.style.display = 'none';
+        }
+      });
+    
+      function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+    </script>
+
+
     <link
       href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
