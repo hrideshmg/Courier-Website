@@ -58,21 +58,21 @@
             <div class="col-md-6">
                 <h1 id="headertext" style="color: white;" class="text-center">Login</h1>
                 <form action="">
-                    <p id="text" style="color: white;">email</p>
+                    <p id="text" style="color: white;">Email</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username" style="border: none; color: white;">
+                        <input required type="email" class="form-control" placeholder="Email" style="border: none; color: white;">
                     </div>
                     <p id="text" style="color: white;">Password</p>
                     <div class="input-group mb-8">
-                        <input type="password" class="form-control" id="passwordInput" placeholder="Password" style="color: white; border: none; border-radius: 5px 0px 0px 5px;">
+                        <input required type="password" class="form-control" id="passwordInput" placeholder="Password" style="color: white; border: none; border-radius: 5px 0px 0px 5px;">
                         <div class="input-group-append ">
                           <span class="input-group-text" style="background-color: #0F4C75; border: none;border-radius: 0px 5px 5px 0px ;height: 38px;"><img onclick="togglePasswordVisiblity()" id="eyeIcon" src="assets/Icons/eye.png" height="100%" width="auto" alt="eyeButton"></span>
                         </div>
                     </div>
-                </form>
                 <div class=" d-flex justify-content-center">
                     <button type="submit" onclick="" class="auth-btn" style="border-radius: 10px;">Log in</button>
                 </div>
+                </form>
             </div>            
         </div>
     </div>
