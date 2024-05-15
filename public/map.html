@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map UI</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <style>
+        #map-container {
+            display: flex;
+            flex-direction: row;
+        }
+        #map {
+            flex: 1;
+            height: 400px;
+        }
+        .map-info {
+            flex: 1;
+            background-color: white;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        .social-icons {
+            margin-top: 10px;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .social-icons img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map-container">
+        <div id="map"></div>
+        <div class="map-info">
+            <p>Kottatharayil, Kottackupuram, Clappana, P.O. Vallikavu, Kerala 690525</p>
+            <p>Monday - Friday: 10 am - 10 pm</p>
+            <p>Sunday: 11 am - 9 pm</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="facebook_icon.png" alt="Facebook"></a>
+<a href="https://www.twitter.com" target="_blank"><img src="twitter_icom.png" alt="Twitter"></a>
+<a href="https://www.instagram.com" target="_blank"><img src="Instagram_icon.png" alt="Instagram"></a>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var map = L.map('map').setView([10.0235, 76.3032], 16);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        var marker = L.marker([10.0235, 76.3032]).addTo(map);
+        L.marker([10.0257, 76.3035]).addTo(map).bindPopup("<b>Vallikavu Devi Temple</b>");
+    </script>
+</body>
+</html>

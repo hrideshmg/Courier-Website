@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import HomeSection from './HomePage/HomeSection';
+import Navbar from './Navbar';
+import ServicesSection from './HomePage/ServiceSection';
+import FindSection from './HomePage/FindUs'
+import Testimonial from './HomePage/Testimonial';
+import CallbackForm from './HomePage/CallBackForm';
+import FindMe from './HomePage/findme';
+import Footer from './HomePage/Footer'
+import FooterExtension from './HomePage/FooterExtension';
+import Login from './LoginPage/signIn';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{minHeight:'100vh',display:'flex',flexDirection:'column'}}>
+      <Navbar />
+      <Login />
     </div>
   );
 }
