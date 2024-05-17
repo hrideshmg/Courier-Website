@@ -1,0 +1,108 @@
+/* CallbackForm.css */
+
+/* General styles for the section */
+section {
+    padding: 2rem 0;
+    color: white;
+  }
+  
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col-md-6,
+  .col-lg-5,
+  .col-xl-4 {
+    margin: 1rem 0;
+  }
+  
+  /* Image styling */
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  
+  /* Text styling */
+  h5, h2, p {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  h5 {
+    font-size: 1.25rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  p.text-muted {
+    font-size: 1rem;
+    opacity: 0.7;
+  }
+  
+  /* Form styling */
+  .form-quriar-control {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    color: #495057;
+  }
+  
+  .form-quriar-control:focus {
+    border-color: #3282B8;
+    box-shadow: 0 0 0 0.2rem rgba(50, 130, 184, 0.25);
+  }
+  
+  .mb-3, .mb-5 {
+    margin-bottom: 1rem;
+  }
+  
+  textarea.form-quriar-control {
+    height: 150px;
+  }
+  
+  .invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #e3342f;
+  }
+  
+  /* Show error messages */
+  #nameError, #emailError, #messageError {
+    display: none;
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: #3282B8;
+    border-color: #3282B8;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #286891;
+    border-color: #286891;
+  }
+  
+  .btn-primary .fas {
+    margin-left: 0.5rem;
+  }
+  
