@@ -6,7 +6,7 @@ import Eye2 from './Icons/eye-disabled.svg';
 
 const Login = () => {
     return (
-        <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#1B262C' }}>
+        <section style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#1B262C', }}>
             <div className="container p-4" style={{ backgroundColor: '#1B262C' }}>
                 <div className="row">
                     <div className="col-md-6" style={{ backgroundColor: '#1B262C' }}>

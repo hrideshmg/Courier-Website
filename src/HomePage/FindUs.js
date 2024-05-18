@@ -3,7 +3,7 @@ import React from 'react';
 import DeliveryMan from './Images/deliveryman.png'
 const FindUs = () => {
   return (
-    <section style={{'background-color': '#3282B8'}}>
+    <section style={{'background-color': '#1B262C'}}>
 
         <div className="container">
           <div className="row">
