@@ -38,7 +38,15 @@ const Order = () => {
   ];
 
   return (
-    <section style={{ flex: "1", backgroundColor: "#1b262c" }}>
+    <section
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        backgroundColor: "#1B262C",
+      }}
+    >
       <div className="bg-holder bg-size">
         <div className="container p-4">
           <div className="row">
