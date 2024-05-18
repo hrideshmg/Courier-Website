@@ -1,23 +1,28 @@
-import "./App.css";
-import HomeSection from "./HomePage/HomeSection";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./HomePage";
+import OrderPage from "./OrderPage";
+import SignupPage from "./SignUP/Signup";
+import SigninPage from "./Signin";
 import Navbar from "./Navbar";
-import ServicesSection from "./HomePage/ServiceSection";
-import FindSection from "./HomePage/FindUs";
-import Testimonial from "./HomePage/Testimonial";
-import CallbackForm from "./HomePage/CallBackForm";
-import FindMe from "./HomePage/findme";
-import Footer from "./HomePage/Footer";
-import FooterExtension from "./HomePage/FooterExtension";
-import Login from "./LoginPage/signIn";
-import Order from "./OrderPage/orderPage";
+import AboutUs from "./about";
 
-function App() {
+const App = () => {
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <Router>
       <Navbar />
-      <Order />
-    </div>
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/order" element={<OrderPage />} />
+          <Route path="/signup" element={<SignupPage />} />
+          <Route path="/signin" element={<SigninPage />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

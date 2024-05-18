@@ -1,6 +1,7 @@
 import React from 'react';
 import Quote from './Images/quote.png'
 import avatar from './Images/avatar.png'
+
 const Testimonial = () => {
     return (
         <section className="py-7" style={{ backgroundColor: '#1B262C' }}>
