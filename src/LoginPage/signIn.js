@@ -1,4 +1,3 @@
-import React from "react";
 import LoginImage from './Images/login.png'
 import Eye from './Icons/eye.png';
 import Eye1 from './Icons/eye-off.png'
