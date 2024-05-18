@@ -1,0 +1,54 @@
+.shipment-heading {
+  font-weight: 600;
+  font-family: Raleway;
+}
+
+.shipment-content {
+  font-weight: 400;
+  font-family: Raleway;
+  font-size: 1rem;
+}
+
+.filter {
+  background-color: #172025;
+}
+
+.form-control {
+  color: black;
+  caret-color: black;
+}
+.form-control:focus {
+  color: black;
+  caret-color: black;
+}
+
+.status {
+  font-family: Oxanium;
+  text-align: right;
+}
+
+.status_image {
+  height: 5.8rem;
+}
+
+.status-container h6 {
+  font-family: Oxanium;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.clear_filters {
+  font-family: Raleway;
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: #0f4c75;
+  border-width: 5px;
+  padding: 5px;
+  font-size: 1.2em;
+  height: 3rem;
+}
+
+.auth-btn {
+  border-radius: 20px;
+}
