@@ -45,7 +45,7 @@ const Testimonial = () => {
                                                     <img className="img-fluid" src={avatar} alt="" />
                                                     <div className="flex-1 ms-3">
                                                         <h6 className="mb-0 fs--1 text-1000 fw-medium">Yves Tanguy</h6>
-                                                        <p className="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
+                                                        <p style={{color:'black'}} className="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -71,7 +71,7 @@ const Testimonial = () => {
                                                     <img className="img-fluid" src={avatar} alt="" />
                                                     <div className="flex-1 ms-3">
                                                         <h6 className="mb-0 fs--1 text-1000 fw-medium">Kim Young Jou</h6>
-                                                        <p className="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
+                                                        <p style={{color:'black'}}className="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -97,7 +97,7 @@ const Testimonial = () => {
                                                     <img className="img-fluid" src={avatar} alt="" />
                                                     <div className="flex-1 ms-3">
                                                         <h6 className="mb-0 fs--1 text-1000 fw-medium">Yves Tanguy</h6>
-                                                        <p className="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
+                                                        <p style={{color:'black'}}className="fs--2 fw-normal mb-0">Chief Executive, DLF</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -274,9 +274,9 @@ const Testimonial = () => {
                     <div className="row px-3 px-md-0 mt-6">
                         <div className="col-12 position-relative">
                             <ol className="carousel-indicators">
-                                <li className="active" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"></li>
-                                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
-                                <li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+                                <li style={{backgroundColor:'#3282B8'}} className="active" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"></li>
+                                <li style={{backgroundColor:'#3282B8'}} data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+                                <li style={{backgroundColor:'#3282B8'}} data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
                             </ol>
                         </div>
                     </div>
