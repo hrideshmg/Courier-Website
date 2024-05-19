@@ -5,8 +5,8 @@ import ServicesSection from "./ServiceSection";
 import FindMe from "./findme";
 import FindUs from "./FindUs";
 import Testimonial from "./Testimonial";
-import Footer from "./Footer";
-import FooterExtension from "../FooterExtension";
+import Footer from "../Footer/Footer";
+import FooterExtension from "../Footer/FooterExtension";
 function Home() {
     return (
         <div>

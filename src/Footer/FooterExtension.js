@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from './Images/Logo.png'
+import Logo from '../GlobalAssets/Images/Logo.png'
 const FooterExtension = () => {
     return(
         <section  style={{'background-color': '#1B262C'}}>

@@ -1,11 +1,9 @@
 import React from 'react';
-import './App.css'; // Add your CSS imports here
+import './css/aboutpage.css';
 
 import founderImage from './Images/guy.jpeg';
-import mapImage from './Images/Map.png';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import FooterExtension from './FooterExtension'
+import Footer from '../Footer/Footer';
+import FooterExtension from '../Footer/FooterExtension'
 const AboutSection = () => (
   <>
     <section style={{ backgroundColor: '#172025' }}>
