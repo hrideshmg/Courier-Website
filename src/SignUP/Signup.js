@@ -17,12 +17,40 @@ const SignUp = () => {
     setConfirmPasswordVisible(!confirmPasswordVisible);
   };
 
-  const validatePasswords = () => {
+  const validatePasswords = (e) => {
     if (password !== confirmPassword) {
       alert("Passwords do not match. Please try again.");
-    } else {
-      console.log("Sign-up successful");
+      e.preventDefault();
     }
+  };
+
+  const callAPI = async (email, password) => {
+    const statusDisplay = document.getElementById("status-display");
+    const response = await fetch("http://localhost:9000/user/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    });
+
+    if (response.status == 200) {
+      statusDisplay.textContent = "Sign Up Successful!";
+    } else if (response.status == 400) {
+      statusDisplay.textContent = "User with this email already exists!";
+    } else {
+      statusDisplay.textContent = `Server Error: ${await response.json()}`;
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email_input").value;
+    const password = document.getElementById("password_input").value;
+    callAPI(email, password);
   };
 
   return (
@@ -46,12 +74,13 @@ const SignUp = () => {
                 <h1 id="headertext" className="text-center" style={{ color: "white" }}>
                   Sign Up
                 </h1>
-                <form>
+                <form action="" onSubmit={handleSubmit}>
                   <p id="email" style={{ color: "white" }}>
                     Email
                   </p>
                   <div className="input-group mb-3">
                     <input
+                      id="email_input"
                       required
                       type="email"
                       className="form-control"
@@ -67,7 +96,7 @@ const SignUp = () => {
                       required
                       type={passwordVisible ? "text" : "password"}
                       className="form-control"
-                      id="passwordInput"
+                      id="password_input"
                       placeholder="Password"
                       style={{ color: "white", border: "none" }}
                       value={password}
@@ -139,6 +168,9 @@ const SignUp = () => {
                     </button>
                   </div>
                 </form>
+                <div className="d-flex m-4" style={{ justifyContent: "center" }}>
+                  <p id="status-display" style={{ color: "white" }}></p>
+                </div>
               </div>
             </div>
           </div>

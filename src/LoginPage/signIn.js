@@ -1,9 +1,42 @@
+import { useNavigate } from "react-router-dom";
 import React from "react";
 import LoginImage from "./Images/login.png";
 import Eye from "./Icons/eye.png";
 import Eye1 from "./Icons/eye-off.png";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const callAPI = async (email, password) => {
+    const statusDisplay = document.getElementById("status-display");
+    const response = await fetch("http://localhost:9000/user/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    });
+
+    if (response.status == 200) {
+      statusDisplay.textContent = "Login Successful!";
+      navigate("/order");
+    } else if (response.status == 403) {
+      statusDisplay.textContent = "Invalid Credentials!";
+    } else {
+      statusDisplay.textContent = `Server Error: ${await response.text()}`;
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email_input").value;
+    const password = document.getElementById("password_input").value;
+    callAPI(email, password);
+  };
+
   return (
     <section
       style={{
@@ -12,9 +45,10 @@ const Login = () => {
         alignItems: "center",
         height: "100vh",
         backgroundColor: "#1B262C",
+        paddingTop: "20px",
       }}
     >
-      <div className="container p-4" style={{ backgroundColor: "#1B262C" }}>
+      <div className="container p-4" style={{ backgroundColor: "#1B262C", height: "100%" }}>
         <div className="row">
           <div className="col-md-6" style={{ backgroundColor: "#1B262C" }}>
             <img src={LoginImage} className="mw-25% mh-" alt="loginPage icon" />
@@ -23,13 +57,14 @@ const Login = () => {
             <h1 id="headertext" style={{ color: "white" }} className="text-center">
               Login
             </h1>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
               <p id="text" style={{ color: "white" }}>
                 Email
               </p>
               <div className="input-group mb-3">
                 <input
                   required
+                  id="email_input"
                   type="email"
                   className="form-control"
                   placeholder="Email"
@@ -44,7 +79,7 @@ const Login = () => {
                   required
                   type="password"
                   className="form-control"
-                  id="passwordInput"
+                  id="password_input"
                   placeholder="Password"
                   style={{ color: "white", border: "none", borderRadius: "5px 0 0 5px" }}
                 />
@@ -70,6 +105,9 @@ const Login = () => {
                 </button>
               </div>
             </form>
+            <div className="d-flex m-4" style={{ justifyContent: "center" }}>
+              <p id="status-display" style={{ color: "white" }}></p>
+            </div>
           </div>
         </div>
       </div>
@@ -78,7 +116,7 @@ const Login = () => {
 };
 
 const togglePasswordVisibility = () => {
-  const passwordInput = document.getElementById("passwordInput");
+  const passwordInput = document.getElementById("password_input");
   const eyeIcon = document.getElementById("eyeIcon");
   if (passwordInput.type === "password") {
     passwordInput.type = "text";
