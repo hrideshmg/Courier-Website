@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-const FilterButtons = () => {
+const FilterButtons = ({ getOrders }) => {
   const [activeFilter, setActiveFilter] = useState(null);
 
   const defaultColor = "#0F4C75";
   const activeColor = "#172025";
 
-  const orders = document.querySelectorAll(".order-delivered, .order-en-route, .order-processed");
-
   const filter = (status) => {
+    const orders = getOrders();
+
     orders.forEach((element) => {
       if (!element.classList.contains(status)) {
         element.style.display = "none";
@@ -19,13 +19,15 @@ const FilterButtons = () => {
   };
 
   const clearFilter = () => {
+    const orders = getOrders();
+
     orders.forEach((element) => {
       element.style.display = "";
     });
     setActiveFilter("");
   };
 
-  const handleButtonClick = (status) => {
+  const handleFilterButtonClick = (status) => {
     filter(status);
     setActiveFilter(status);
   };
@@ -37,7 +39,7 @@ const FilterButtons = () => {
           id="processed"
           className="auth-btn"
           style={{ backgroundColor: activeFilter === "order-processed" ? activeColor : defaultColor }}
-          onClick={() => handleButtonClick("order-processed")}
+          onClick={() => handleFilterButtonClick("order-processed")}
         >
           Processed
         </button>
@@ -47,7 +49,7 @@ const FilterButtons = () => {
           id="en-route"
           className="auth-btn"
           style={{ backgroundColor: activeFilter === "order-en-route" ? activeColor : defaultColor }}
-          onClick={() => handleButtonClick("order-en-route")}
+          onClick={() => handleFilterButtonClick("order-en-route")}
         >
           En Route
         </button>
@@ -57,7 +59,7 @@ const FilterButtons = () => {
           id="delivered"
           className="auth-btn"
           style={{ backgroundColor: activeFilter === "order-delivered" ? activeColor : defaultColor }}
-          onClick={() => handleButtonClick("order-delivered")}
+          onClick={() => handleFilterButtonClick("order-delivered")}
         >
           Delivered
         </button>

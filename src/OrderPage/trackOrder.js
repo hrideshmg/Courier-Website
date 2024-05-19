@@ -1,12 +1,26 @@
-const TrackOrder = () => {
+const TrackOrder = ({ getOrders }) => {
+  const getItemById = (event) => {
+    event.preventDefault();
+
+    const search_id = document.getElementById("search_id").value;
+    const orders = getOrders();
+    orders.forEach((orderItem) => {
+      const tracking_id = orderItem.querySelector(".order-no").textContent;
+      console.log(tracking_id);
+      if (search_id == tracking_id) orderItem.style.display = "";
+      else orderItem.style.display = "none";
+    });
+  };
+
   return (
     <div className="col-md-3 pt-3 pb-3" style={{ backgroundColor: "#0f4c75", borderRadius: "10px", height: "15rem" }}>
       <div className="p-3">
         <h3 className="pb-2" style={{ color: "white", fontSize: 24, fontWeight: 300 }}>
           <b>Track</b> Your Order
         </h3>
-        <form action="">
+        <form action="" onSubmit={getItemById}>
           <input
+            id="search_id"
             type="text"
             className="form-control"
             placeholder="Enter Your Order ID"

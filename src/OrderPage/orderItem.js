@@ -7,7 +7,7 @@ const OrderItem = ({ title, address, orderNo, status, imgSrc, statusImgSrc }) =>
           <div className="ms-3">
             <h5 className="shipment-heading">{title}</h5>
             <p className="shipment-content m-0">{address}</p>
-            <p className="shipment-content">{orderNo}</p>
+            <p className="shipment-content order-no">{orderNo}</p>
           </div>
         </div>
       </div>

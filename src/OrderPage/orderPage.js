@@ -10,6 +10,10 @@ import en_route from "./Icons/en_route.png";
 import "./css/order.css";
 
 const Order = () => {
+  const getOrders = () => {
+    return document.querySelectorAll(".order-delivered, .order-en-route, .order-processed");
+  };
+
   const ordersData = [
     {
       status: "order-delivered",
@@ -51,7 +55,7 @@ const Order = () => {
         <div className="container p-4">
           <div className="row">
             <div className="col-md-9">
-              <FilterButtons />
+              <FilterButtons getOrders={getOrders} />
               {ordersData.map((order, index) => (
                 <OrderItem
                   key={index}
@@ -64,7 +68,7 @@ const Order = () => {
                 />
               ))}
             </div>
-            <TrackOrder />
+            <TrackOrder getOrders={getOrders} />
           </div>
         </div>
       </div>
