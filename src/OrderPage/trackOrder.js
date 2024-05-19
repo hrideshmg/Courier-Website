@@ -6,7 +6,13 @@ const TrackOrder = () => {
           <b>Track</b> Your Order
         </h3>
         <form action="">
-          <input type="text" className="form-control" placeholder="Enter Your Order ID" required />
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter Your Order ID"
+            style={{ color: "white", "caret-color": "white" }}
+            required
+          />
           <div className="pt-3 d-flex justify-content-center">
             <button
               type="submit"

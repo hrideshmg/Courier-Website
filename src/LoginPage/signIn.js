@@ -29,9 +29,10 @@ const Login = () => {
               </p>
               <div className="input-group mb-3">
                 <input
-                  type="text"
+                  required
+                  type="email"
                   className="form-control"
-                  placeholder="Username"
+                  placeholder="Email"
                   style={{ border: "none", color: "white" }}
                 />
               </div>
@@ -40,6 +41,7 @@ const Login = () => {
               </p>
               <div className="input-group mb-3">
                 <input
+                  required
                   type="password"
                   className="form-control"
                   id="passwordInput"
@@ -62,12 +64,12 @@ const Login = () => {
                   </span>
                 </div>
               </div>
+              <div className="d-flex justify-content-center" style={{ backgroundColor: "#1B262C" }}>
+                <button type="submit" className="auth-btn" style={{ borderRadius: "10px" }}>
+                  Log in
+                </button>
+              </div>
             </form>
-            <div className="d-flex justify-content-center" style={{ backgroundColor: "#1B262C" }}>
-              <button type="submit" className="auth-btn" style={{ borderRadius: "10px" }}>
-                Log in
-              </button>
-            </div>
           </div>
         </div>
       </div>

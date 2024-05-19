@@ -14,9 +14,10 @@
 }
 
 .form-control {
-  color: black;
-  caret-color: black;
+  color: white;
+  caret-color: white;
 }
+
 .form-control:focus {
   color: black;
   caret-color: black;

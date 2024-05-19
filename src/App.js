@@ -18,7 +18,6 @@ const App = () => {
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/signin" element={<SigninPage />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="*" element={<HomePage />} />
         </Routes>
       </div>
     </Router>
@@ -26,3 +25,4 @@ const App = () => {
 };
 
 export default App;
+
